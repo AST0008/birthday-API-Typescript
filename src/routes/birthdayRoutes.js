@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const birthdayController_1 = require("../controllers/birthdayController");
+const router = (0, express_1.Router)();
+router.post('/', birthdayController_1.addBirthday);
+router.get('/', birthdayController_1.getBirthday);
+router.put('/:name', birthdayController_1.updateBirthday);
+router.delete('/:name', birthdayController_1.deleteBirthday);
+exports.default = router;
